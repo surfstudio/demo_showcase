@@ -37,16 +37,6 @@ class _AuthScreenState extends WidgetState<BaseAuthScreenWidgetModel> {
     return AppBar(
       automaticallyImplyLeading: false,
       elevation: 0.0,
-      actions: [
-        IconButton(
-          onPressed: wm.closeAction,
-          icon: const Icon(
-            Icons.close,
-            color: Colors.white,
-            size: 24.0,
-          ),
-        ),
-      ],
     );
   }
 
@@ -90,6 +80,7 @@ class _AuthScreenState extends WidgetState<BaseAuthScreenWidgetModel> {
 
   Widget _buildFooter() {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         const SizedBox(width: 16.0),
         _AcceptNumberButton(

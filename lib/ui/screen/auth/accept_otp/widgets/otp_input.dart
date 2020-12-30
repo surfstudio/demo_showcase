@@ -8,7 +8,7 @@ import 'package:flutter_masked_text/flutter_masked_text.dart';
 /// стандартная длина ОТП-кода
 const defaultOtpCodeLength = 5;
 
-const _invisibleOpacity = 0.0;
+const _invisibleOpacity = 0.5;
 
 /// Виджет для ввода ОТП-кода
 class OtpFieldWidget extends StatefulWidget {
@@ -87,6 +87,8 @@ class _OtpFieldWidgetState extends State<OtpFieldWidget> {
     return Opacity(
       opacity: _invisibleOpacity,
       child: TextField(
+        style: TextStyle(color: Colors.white),
+        cursorColor: Colors.white,
         controller: _editingController,
         autofocus: true,
         enableInteractiveSelection: false,
